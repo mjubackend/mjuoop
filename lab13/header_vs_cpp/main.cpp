@@ -4,10 +4,10 @@ using namespace std;
 
 
 class SmartPointer {
-private:
+  private:
     int* ptr;
 
-public:
+  public:
     SmartPointer(int* p) : ptr{p} {}
 
     ~SmartPointer() {
@@ -38,6 +38,7 @@ public:
         return *this;
     }
 };
+
 
 int main() {
     SmartPointer sp(new int(42));
