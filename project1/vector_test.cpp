@@ -9,11 +9,11 @@
 // 직접 구현한 클래스가 없는 동안 아래 예제 코드를 실행 시키기 위해서
 // C++ 표준 라이브러리의 vector 를 이용한다.
 // 우리는 표준 라이브러리의 vector 중 일부 기능을 구현하는 것이 목표이다.
-// 본인이 MyList 를 구현한 뒤에는 아래 줄을 주석 처리한다.
-using MyList = std::vector<int>;
+// 본인이 MyVector 를 구현한 뒤에는 아래 줄을 주석 처리한다.
+using MyVector = std::vector<int>;
 
-// 본인이 MyList 를 구현한 뒤에는 아래 줄을 주석에서 제거한다.
-// #include "MyList.h"
+// 본인이 MyVector 를 구현한 뒤에는 아래 줄을 주석에서 제거한다.
+// #include "MyVector.h"
 
 
 
@@ -26,7 +26,7 @@ const int MAX_INSERTION = 100 * 1000;
 const int MAX_DELETION = 30 * 1000;
 
 
-void selectionSort(MyList &v) {
+void selectionSort(MyVector &v) {
   int n = v.size();
 
   for (int i = 0; i < n - 1; ++i) {
@@ -61,7 +61,7 @@ void selectionSort2(ReferenceVector &v) {
 
 
 int main() {
-  MyList v;
+  MyVector v;
 
   // 결과 비교를 위해 표준 라이브러리 vector 를 이용한다.
   ReferenceVector compare;
@@ -85,7 +85,7 @@ int main() {
 
   if (v.size() != compare.size()) {
     std::cout << "Tried " << MAX_INSERTION << " insertions.\n";
-    std::cout << "MyList has " << v.size() << " elements, while Reference Vector has " << compare.size() << "\n";
+    std::cout << "MyVector has " << v.size() << " elements, while Reference Vector has " << compare.size() << "\n";
     return 1;
   }
 
