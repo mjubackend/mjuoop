@@ -23,8 +23,8 @@ int main() {
 
   v->push_back(10);
   cout << v->size() << "\n";
-  updateVectorElement(*v, 20);
   updateListElement(*v, 30);
+  updateVectorElement(*v, 20);
   v->pop_back();
 
   MyContainer *l = MyContainer::Create(MyContainer::LIST);
